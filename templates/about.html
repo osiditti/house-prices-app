@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  About
+{% endblock %}
+
+{% block main %}
+  
+    <div class="about">
+        <div id="aboutme"><h1 class="abouth">About Me</h1></div>
+        <p class="about">
+        My name is Edit Osikovicz, and I work as a management consultant at The Boston Consulting Group in Hungary. In my daily job, I give strategy advice to companies in the energy and financial sectors in the Central and Eastern European region. In my freetime, I code and experiment with machine learning techniques. The Predicting House Prices web app presents the first full-fledged data science project that I created, primarily as a final project for Harvard's <a href="https://www.edx.org/course/introduction-computer-science-harvardx-cs50x">CS50</a> course.
+        </p>
+        <h1 class="abouth">About Predicting House Prices</h1>
+        <p class="about">
+        As its name suggests, the purpose of this web app is to predict the market price of a house (or more precisely, of a house in Ames, Iowa). Its backbone is a machine learning model that I have built on Kaggle's Ames House Prices <a href="https://www.kaggle.com/c/house-prices-advanced-regression-techniques">dataset</a>. Since the goal is to predict a continuous number (price), the app applies regression (rather than classification or clustering) to predict the market price based on the house's key parameters.
+        </p>
+        <h2>Machine Learning Model</h2>
+        <p class="about">
+        The machine learning model behind the scenes is an <b>XGBoost Regressor</b> implemented from the <code>sklearn API</code>. XGBoost is an extremely powerful <a href="https://en.wikipedia.org/wiki/Gradient_boosting">gradient boosting</a> algorithm, which builds its prediction model as an ensemble of weak predictors. (It is also known as the model that wins most Kaggle competitions.)
+        <br><br>
+        The model's final performance on the test set is a MAE (Mean Absolute Error) of +/- 2.5% and an RMSE (Root-Mean-Square Error) of +/- 3.8%.
+        <h2>Technology Stack</h2>
+        </p>
+        <p class="about">
+        For the creation of Predicting House Prices, I have relied on the below technology stack:
+            <ul>
+                <li>Backend:  <code>Python 3</code>, <code>Flask API</code></li>
+                <li>Frontend:  <code>HTML</code>, <code>CSS</code>, <code>Bootstrap</code>, <code>Jinja2</code></li>
+                <li>Machine learning:  <code>xgboost</code> (incl. <code>sklearn API</code>), <code>pandas</code>, <code>numpy</code>, <code>scikit-learn</code>, <code>matplotlib</code>, <code>seaborn</code>, <code>Jupyter notebook</code></li>
+                <li>Hosting:  <code>Heroku</code></li>
+            </ul>
+        </p>
+    </div>
+    
+{% endblock %}
