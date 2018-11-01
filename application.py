@@ -66,7 +66,8 @@ def index():
         
         # predict and save result
         pred_price = regressor.predict(input)
-        
+        # instantiate result
+        session["result"] = 0
         session["result"] = math.ceil(pred_price[0])
         
         # redirect to result page
