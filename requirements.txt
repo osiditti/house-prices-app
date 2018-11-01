@@ -3,4 +3,3 @@ Flask_Session==0.3.1
 pandas==0.21.0
 scikit_learn==0.20.0
 gunicorn==19.9.0
-xgboost==0.6a2
