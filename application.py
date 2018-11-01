@@ -20,6 +20,8 @@ from helpers import *
 
 # configure application
 app = Flask(__name__)
+#app.config.from_object('app.default_settings')
+app.config.from_envvar('APP_SETTINGS')
 
 # ensure responses aren't cached
 if app.config["DEBUG"]:
@@ -35,6 +37,9 @@ app.config["SESSION_FILE_DIR"] = mkdtemp()
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
+
+# secret key
+app.secret_key = "0PaÿÌwâÉ°Cõ£\ÈBä,"
 
 @app.route("/", methods=["GET", "POST"])
 def index():
